@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Hi from './Components/Hi';
+import Counter from './Components/Counter.js';
+import CommentBox from './Components/Comment/CommentBox.js';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<Hi />, document.getElementById('hi'));
+ReactDOM.render(<CommentBox url="/api/comments.js" pollInterval={2000}/>, document.getElementById('content'));
+ReactDOM.render(<Counter />, document.getElementById('counter'));
